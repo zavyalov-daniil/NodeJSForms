@@ -1,10 +1,12 @@
-import express from 'express'
 import dotenv from 'dotenv'
+import { createExpressServer } from 'routing-controllers';
+import { FormController } from './controller/form-controller';
 
 dotenv.config();
-const app = express();
 const port = process.env.PORT;
-app.get('/', (request, response) => {
-  response.send('Hello world!');
+
+const app = createExpressServer({
+     controllers: [FormController],
 });
-app.listen(port, () => console.log(`Running on port ${port}`));
+
+app.listen(port, () => console.log(`Running on port ${port}`))
