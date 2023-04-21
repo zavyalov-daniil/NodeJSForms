@@ -6,6 +6,10 @@ import { GlobalErrorHandler } from "./middleware/global-error-handler";
 import express, { Express } from "express";
 import httpContext from "express-http-context";
 
+import AppDataSource from "../config/orm-config";
+
+AppDataSource
+
 dotenv.config();
 const port = process.env.PORT;
 
@@ -21,3 +25,5 @@ useExpressServer(app, {
 
 app.use(bodyParser.json());
 app.listen(port, () => console.log(`Running on port ${port}`))
+
+export default app;
