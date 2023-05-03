@@ -2,7 +2,7 @@
   "name": "nodejsforms",
   "version": "1.0.0",
   "description": "Desc",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsc",
     "predev": "npm run swagger",

@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import dotenv from 'dotenv'
 //import bodyParser from "body-parser";
 import express, { Express } from "express";
